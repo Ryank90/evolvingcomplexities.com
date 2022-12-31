@@ -1,1 +1,3 @@
 .DS_*
+public
+.hugo_build.lock
