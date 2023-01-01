@@ -1,0 +1,26 @@
+{{ define "main" }}
+    
+<div style="margin-bottom: 2.5rem; text-align:center;">
+  <div style="width: 100%; height: 300px; background-color: #ccc;"></div>
+  {{ if site.Params.name }}
+  <h1 style="margin-top: 1.5rem;" class="mt-1.5 mb-3 text-3xl font-bold">{{ site.Params.name }}</h1>
+  {{ end }}
+  <div>{{ site.Params.bio | default (print "Personal blog by " site.Params.name) }}</div>
+</div>
+
+<h2>Recent Articles:</h2>
+
+{{ range first 6 (where .Site.RegularPages "Type" "posts") }}
+<section style="display:inline-block;overflow:hidden;width:100%;">
+  <h2 style="float:left;margin-bottom:4px;margin-top:4px;font-size:1.1rem;">
+    {{ if gt (len .Title) 70 }}
+    <a href="{{ .RelPermalink }}">{{ slicestr .Title 0 70 | markdownify }}...</a>
+    {{ else }}
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ end }}
+  </h2>
+  <time style="float:right;">{{ .Date | time.Format ":date_medium" }}</time>
+</section>
+{{ end }}
+
+{{ end }}

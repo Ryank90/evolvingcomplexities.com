@@ -6,42 +6,20 @@
 {{ end }}
 
 <!-- $pages -->
-{{ $pages := union .RegularPages .Sections }}
-{{ if .IsHome }}
-{{ range first 5 (where .Site.RegularPages "Type" "posts") }}
-<section style="display:inline-block;overflow:hidden;width:100%;">
-    <h2 style="float:left;margin-bottom:4px;margin-top:4px;font-size:1.1rem;">
-      {{ if gt (len .Title) 70 }}
-      <a href="{{ .RelPermalink }}">{{ slicestr .Title 0 70 | markdownify }}...</a>
-      {{ else }}
-      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-      {{ end }}
-    </h2>
-    <time style="float:right;">{{ .Date | time.Format ":date_medium" }}</time>
-  </section>
-{{ end }}
-{{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{ $pages := union .RegularPages .Sections }}<!---->
+{{ if .IsHome }}<!---->
+{{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}<!---->
 {{ end }}
 
 <!-- Articles -->
-{{ $paginator := .Paginate $pages }} {{ range $index, $page := $paginator.Pages }}
-
-<!-- avatar -->
-{{ if and $.IsHome (eq $paginator.PageNumber 1) (eq $index 0) }}<!---->
-<div style="margin-bottom: 2.5rem; text-align:center;">
-    <div style="width: 100%; height: 300px; background-color: #ccc;"></div>
-    {{ if site.Params.name }}
-    <h1 style="margin-top: 1.5rem;" class="mt-1.5 mb-3 text-3xl font-bold">{{ site.Params.name }}</h1>
-    {{ end }}
-    <div>{{ site.Params.bio | default (print "Personal blog by " site.Params.name) }}</div>
-</div>
-
-<h2>Recent Articles:</h2>
-{{ end }}
+{{ $paginator := .Paginate $pages }} {{ range $index, $page := $paginator.Pages
+}}<!---->
 
 <section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
   <h2 class="!my-0 pb-1 !leading-none">{{ .Title }}</h2>
-  <time class="text-sm opacity-60">{{ .Date | time.Format ":date_medium" }}</time>
+  <time class="text-sm opacity-60"
+    >{{ .Date | time.Format ":date_medium" }}</time
+  >
   <a class="absolute inset-0" href="{{ .Permalink }}"></a>
 </section>
 {{ end }}
@@ -53,7 +31,9 @@
   <a class="btn" href="{{ $paginator.Prev.URL }}">← {{ i18n "prev_page" }}</a>
   {{ end }}<!---->
   {{ if $paginator.HasNext }}
-  <a class="btn ml-auto" href="{{ $paginator.Next.URL }}">{{ i18n "next_page" }} →</a>
+  <a class="btn ml-auto" href="{{ $paginator.Next.URL }}"
+    >{{ i18n "next_page" }} →</a
+  >
   {{ end }}
 </nav>
 {{ end }}<!---->

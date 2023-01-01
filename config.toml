@@ -5,11 +5,11 @@ title = 'Evolving Complexities'
 theme = 'paper'
 
 [permalinks]
-    post = "/posts/:title/"
+    posts = "/:year/:month/:title/"
     page = "/:title/"
 
 [author]
-    name = 'ryan kerry'
+    name = 'Ryan Kerry'
 
 [params]
     color = 'linen'
