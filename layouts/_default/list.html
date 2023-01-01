@@ -10,14 +10,14 @@
 {{ if .IsHome }}
 {{ range first 5 (where .Site.RegularPages "Type" "posts") }}
 <section style="display:inline-block;overflow:hidden;width:100%;">
-    <h2 style="float:left;margin-bottom:0px;margin-top:4px;font-size:1.1rem;">
+    <h2 style="float:left;margin-bottom:4px;margin-top:4px;font-size:1.1rem;">
       {{ if gt (len .Title) 70 }}
       <a href="{{ .RelPermalink }}">{{ slicestr .Title 0 70 | markdownify }}...</a>
       {{ else }}
       <a href="{{ .RelPermalink }}">{{ .Title }}</a>
       {{ end }}
     </h2>
-    <time style="float:right;margin-top:2px;">{{ .Date | time.Format ":date_medium" }}</time>
+    <time style="float:right;">{{ .Date | time.Format ":date_medium" }}</time>
   </section>
 {{ end }}
 {{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
