@@ -1,4 +1,4 @@
-# baseURL = 'https://www.evolvingcomplexities.com/'
+baseURL = 'https://evolvingcomplexities.com/'
 relativeURLs = true
 languageCode = 'en-gb'
 title = 'Evolving Complexities'
