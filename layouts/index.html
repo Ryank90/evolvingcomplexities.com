@@ -1,7 +1,9 @@
 {{ define "main" }}
     
 <div style="margin-bottom: 2.5rem; text-align:center;">
-  <div style="width: 100%; height: 300px; background-color: #ccc;"></div>
+  <div style="width: 100%; height: 360px; background-color: #ccc; overflow:hidden;">
+    <img src="{{ `Next4.jpg` | absURL }}" alt="" style="margin-top:-110px !important;" />
+  </div>
   {{ if site.Params.name }}
   <h1 style="margin-top: 1.5rem;" class="mt-1.5 mb-3 text-3xl font-bold">{{ site.Params.name }}</h1>
   {{ end }}
@@ -23,6 +25,6 @@
 </section>
 {{ end }}
 
-<a href="#">All Articles</a>
+<a href="/posts/">All Articles</a>
 
 {{ end }}
