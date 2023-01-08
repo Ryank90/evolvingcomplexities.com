@@ -19,6 +19,8 @@ theme = 'paper'
     disableHLJS = false
     monoDarkIcon = true
 
+    description = 'Include something in here'
+
     avatar = 'GRAVATAR_EMAIL'
     name = 'Evolving Complexities'
     bio = 'Ryan Kerry introduction to some random commentary here...'
@@ -30,10 +32,9 @@ theme = 'paper'
     github = 'Ryank90'
     instagram = 'YOUR_INSTAGRAM_ID'
 
-
 [[menu.main]]
     identifier = "posts"
-    name = "Archive"
+    name = "Articles"
     url = "/posts/"
     weight = 1
 

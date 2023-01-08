@@ -1,7 +1,7 @@
 ---
-title: "Farewell Lush, Hello Unity"
+title: "Farewell Lush, hello Unity"
 date: 2018-10-10T12:06:36Z
-draft: true
+draft: false
 tags: ["career", "personal", "unity"]
 ---
 

@@ -6,21 +6,24 @@
 {{ end }}
 
 <!-- $pages -->
-{{ $pages := union .RegularPages .Sections }}<!---->
-{{ if .IsHome }}<!---->
-{{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}<!---->
+{{ $pages := union .RegularPages .Sections }}
+{{ if .IsHome }}
+{{ $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{ end }}
 
 <!-- Articles -->
-{{ $paginator := .Paginate $pages }} {{ range $index, $page := $paginator.Pages
-}}<!---->
+<h2>Recent Articles:</h2>
 
-<section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
-  <h2 class="!my-0 pb-1 !leading-none">{{ .Title }}</h2>
-  <time class="text-sm opacity-60"
-    >{{ .Date | time.Format ":date_medium" }}</time
-  >
-  <a class="absolute inset-0" href="{{ .Permalink }}"></a>
+{{ $paginator := .Paginate $pages }} {{ range $index, $page := $paginator.Pages }}
+<section class="articles__block list first-of-type:mt-0 last-of-type:mb-0">
+  <h2>
+    {{ if gt (len .Title) 70 }}
+    <a href="{{ .RelPermalink }}">{{ slicestr .Title 0 70 | markdownify }}...</a>
+    {{ else }}
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ end }}
+  </h2>
+  <time>{{ .Date | time.Format ":date_medium" }}</time>
 </section>
 {{ end }}
 
@@ -29,13 +32,11 @@
 <nav class="mt-24 flex">
   {{ if $paginator.HasPrev }}
   <a class="btn" href="{{ $paginator.Prev.URL }}">← {{ i18n "prev_page" }}</a>
-  {{ end }}<!---->
+  {{ end }}
   {{ if $paginator.HasNext }}
-  <a class="btn ml-auto" href="{{ $paginator.Next.URL }}"
-    >{{ i18n "next_page" }} →</a
-  >
+  <a class="btn ml-auto" href="{{ $paginator.Next.URL }}">{{ i18n "next_page" }} →</a>
   {{ end }}
 </nav>
-{{ end }}<!---->
+{{ end }}
 
 {{ end }}

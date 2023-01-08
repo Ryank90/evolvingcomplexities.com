@@ -1,30 +1,33 @@
 {{ define "main" }}
-    
-<div style="margin-bottom: 2.5rem; text-align:center;">
-  <div style="width: 100%; height: 360px; background-color: #ccc; overflow:hidden;">
-    <img src="{{ `Next4.jpg` | absURL }}" alt="" style="margin-top:-110px !important;" />
+<section class="intro">
+  <div class="intro__img">
+    <img src="{{ `Next4.jpg` | absURL }}" alt="Speaking at Google Next" class="img-home" />
   </div>
   {{ if site.Params.name }}
-  <h1 style="margin-top: 1.5rem;" class="mt-1.5 mb-3 text-3xl font-bold">{{ site.Params.name }}</h1>
+  <h1 class="mt-1.5 mb-3 text-3xl font-bold">{{ site.Params.name }}</h1>
   {{ end }}
   <div>{{ site.Params.bio | default (print "Personal blog by " site.Params.name) }}</div>
-</div>
+</section>
 
 <h2>Recent Articles:</h2>
 
 {{ range first 6 (where .Site.RegularPages "Type" "posts") }}
-<section style="display:inline-block;overflow:hidden;width:100%;">
-  <h2 style="float:left;margin-bottom:4px;margin-top:4px;font-size:1.1rem;">
+<section class="articles__block list">
+  <h2>
     {{ if gt (len .Title) 70 }}
     <a href="{{ .RelPermalink }}">{{ slicestr .Title 0 70 | markdownify }}...</a>
     {{ else }}
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     {{ end }}
   </h2>
-  <time style="float:right;">{{ .Date | time.Format ":date_medium" }}</time>
+  <time>{{ .Date | time.Format ":date_medium" }}</time>
 </section>
 {{ end }}
 
-<a href="/posts/">All Articles</a>
-
+<section class="articles__block">
+  <a href="/posts/" class="link__block hover:bg-black/[2%]" title="all articles">
+    <span>All Articles</span>
+    <span class="ml-1.5">→</span>
+  </a>
+</section>
 {{ end }}
