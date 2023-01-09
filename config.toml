@@ -4,6 +4,9 @@ languageCode = 'en-gb'
 title = 'Evolving Complexities'
 theme = 'paper'
 
+[markup.goldmark.renderer]
+  unsafe = true # Allow HTML in md files
+
 [permalinks]
     posts = "/:year/:month/:title/"
     page = "/:title/"

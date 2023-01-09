@@ -4,7 +4,9 @@ date: 2022-12-31T17:55:58Z
 draft: false
 ---
 
-![about](/about.jpg)
+<div class="img__about">
+    <img src="/IMG-0267.JPG">
+</div>
 
 Something in here with an introduction...
 
