@@ -5,7 +5,7 @@ draft: false
 ---
 
 <div class="img__about">
-    <img src="/IMG-0267.JPG">
+    <img src="/IMG-0267.JPG" alt="Cyprus tec dive on Zenobia">
 </div>
 
 Something in here with an introduction...
