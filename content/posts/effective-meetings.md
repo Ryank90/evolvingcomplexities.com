@@ -1,3 +1,10 @@
+---
+title: "How to have effective meetings"
+date: 2022-10-10T12:06:36Z
+draft: true
+tags: ["leadership", "management", "engineering"]
+---
+
 Meetings are an essential part of any engineering organization. They provide a platform for collaboration, decision-making, and sharing information. However, not all meetings are productive, and ineffective meetings can be a significant waste of time and resources. Here are some tips for ensuring that meetings in your engineering organization are effective.
 
 ## Set clear objectives
