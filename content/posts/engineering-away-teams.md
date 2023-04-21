@@ -1,4 +1,9 @@
-Engineering Away Teams: Enhancing Collaboration and Innovation in the Global Workplace
+---
+title: "Engineering Away Teams: Enhancing Collaboration and Innovation in the Global Workplace"
+date: 2022-10-10T12:06:36Z
+draft: true
+tags: ["leadership", "management", "engineering"]
+---
 
 In today's fast-paced and interconnected world, businesses need to be agile and adaptable to stay competitive. Whether you're developing a new software application, constructing a new building, or manufacturing a new product, you need access to the right skills, expertise, and resources to succeed. That's where engineering away teams come in. In this post, we'll explore the benefits and challenges of engineering away teams, and share best practices and case studies to help you optimize your global workforce.
 
