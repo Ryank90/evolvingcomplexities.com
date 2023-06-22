@@ -26,7 +26,7 @@ theme = 'paper'
 
     avatar = 'GRAVATAR_EMAIL'
     name = 'Evolving Complexities'
-    bio = 'Ryan Kerry introduction to some random commentary here...'
+    bio = "Hey 👋! I'm Ryan and I am currently a Senior Director of Engineering at Unity. I blog here semi-frequently about engineering leadership, management, technology and my technical diving adventures."
 
     # --------------------------------------
     # social channels
