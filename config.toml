@@ -1,7 +1,7 @@
-baseURL = 'https://evolvingcomplexities.com/'
+baseURL = 'https://evolvingcomplexity.co.uk/'
 relativeURLs = true
 languageCode = 'en-gb'
-title = 'Evolving Complexities'
+title = 'Evolving Complexity'
 theme = 'paper'
 
 [markup.goldmark.renderer]
@@ -25,8 +25,8 @@ theme = 'paper'
     description = 'Include something in here'
 
     avatar = 'GRAVATAR_EMAIL'
-    name = 'Evolving Complexities'
-    bio = 'Ryan Kerry introduction to some random commentary here...'
+    name = 'Evolving Complexity'
+    bio = "Hey 👋! I'm Ryan Kerry and I'm currently the Senior Director of Engineering at Unity. I blog here frequently about engineering leadership, managemenet, technology and my technical diving adventures."
 
     # --------------------------------------
     # social channels
